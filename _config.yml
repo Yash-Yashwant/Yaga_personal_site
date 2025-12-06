@@ -1,12 +1,14 @@
 # Site settings
 title: Your Name
-description: Personal portfolio and projects
+description: Writer, Developer, Photographer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
+author: Your Name
 
 # Build settings
 markdown: kramdown
-theme: minima
+permalink: /blog/:year/:month/:day/:title/
+paginate: 10
 
 # Collections
 collections:
@@ -16,6 +18,11 @@ collections:
 
 # Defaults
 defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
   - scope:
       path: ""
       type: "projects"

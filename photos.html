@@ -1,0 +1,40 @@
+---
+layout: default
+title: Photos
+---
+
+<h1 style="text-align: center; margin-bottom: 2rem;">Photography</h1>
+
+<p style="text-align: center; color: var(--sepia-medium); font-style: italic; margin-bottom: 3rem;">
+    A collection of moments captured through the lens
+</p>
+
+<!-- Photo Grid -->
+<div class="photo-grid">
+    {% assign photo_posts = site.posts | where_exp: "post", "post.tags contains 'photos'" %}
+    {% for post in photo_posts %}
+    <article class="photo-card">
+        {% if post.image %}
+        <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+        </a>
+        {% endif %}
+        <div class="photo-info">
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <div class="post-meta">{{ post.date | date: "%B %d, %Y" }}</div>
+        </div>
+    </article>
+    {% endfor %}
+
+    {% if photo_posts.size == 0 %}
+    <p style="grid-column: 1/-1; text-align: center; color: var(--sepia-medium); font-style: italic; padding: 3rem;">
+        No photos yet. Create blog posts with <code>tags: [photos]</code> and add an <code>image:</code> field to showcase them here!
+    </p>
+    {% endif %}
+</div>
+
+<div class="ornament" style="margin-top: 3rem;">❦</div>
+
+<p style="text-align: center; color: var(--sepia-medium); margin-top: 2rem;">
+    <em>To add photos: Create a post in <code>_posts/</code> with <code>tags: [photos]</code> and include an <code>image:</code> field</em>
+</p>
