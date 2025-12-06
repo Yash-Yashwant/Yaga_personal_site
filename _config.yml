@@ -8,7 +8,11 @@ author: Your Name
 # Build settings
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
-paginate: 10
+
+# GitHub Pages / Jekyll plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # Collections
 collections:
