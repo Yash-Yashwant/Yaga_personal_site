@@ -1,0 +1,81 @@
+---
+layout: default
+title: Blog Archive
+---
+
+<h1 style="text-align: center; margin-bottom: 2rem;">All Posts</h1>
+
+<!-- Category Filter -->
+<div class="category-filter">
+    <a href="{{ '/blog' | relative_url }}" id="filter-all">All</a>
+    {% assign categories = site.posts | map: 'category' | uniq | sort %}
+    {% for category in categories %}
+    {% if category %}
+    <a href="#" data-category="{{ category }}">{{ category | capitalize }}</a>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<!-- All Posts -->
+<section class="blog-posts">
+    {% for post in site.posts %}
+    <article class="post-card" data-category="{{ post.category }}">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <div class="post-meta">
+            {{ post.date | date: "%B %d, %Y" }}
+            {% if post.category %}
+            <span class="category">{{ post.category }}</span>
+            {% endif %}
+        </div>
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+        <a href="{{ post.url | relative_url }}" class="read-more">Continue reading →</a>
+    </article>
+    {% endfor %}
+
+    {% if site.posts.size == 0 %}
+    <p style="text-align: center; color: var(--sepia-medium); font-style: italic; padding: 3rem;">
+        No posts yet. Create a file like <code>_posts/2024-12-06-my-first-post.md</code> to get started!
+    </p>
+    {% endif %}
+</section>
+
+<!-- Simple Category Filter JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterLinks = document.querySelectorAll('.category-filter a');
+    const postCards = document.querySelectorAll('.post-card');
+    const allLink = document.getElementById('filter-all');
+
+    filterLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.id === 'filter-all') return;
+
+            e.preventDefault();
+
+            // Remove active class from all links
+            filterLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+
+            const category = this.getAttribute('data-category');
+
+            // Filter posts
+            postCards.forEach(card => {
+                if (!category || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Show all on "All" click
+    if (allLink) {
+        allLink.addEventListener('click', function() {
+            filterLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+            postCards.forEach(card => card.style.display = 'block');
+        });
+    }
+});
+</script>
