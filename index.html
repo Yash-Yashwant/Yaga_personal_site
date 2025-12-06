@@ -1,0 +1,31 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+    <h2>Welcome to My Portfolio</h2>
+    <p>{{ site.description }}</p>
+</section>
+
+<section class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+        {% for project in site.projects %}
+        <div class="project-card">
+            <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+            {% if project.tagline %}
+            <p class="card-tagline">{{ project.tagline }}</p>
+            {% endif %}
+            {% if project.technologies %}
+            <div class="card-technologies">
+                {% for tech in project.technologies limit:3 %}
+                <span class="tech-tag">{{ tech }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <a href="{{ project.url | relative_url }}" class="read-more">Read more →</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
