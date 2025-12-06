@@ -1,14 +1,18 @@
 # Site settings
 title: Your Name
 description: Writer, Developer, Photographer
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+baseurl: "/Yaga_personal_site" # your repo name
+url: "https://Yash-Yashwant.github.io" # your GitHub Pages URL
 author: Your Name
 
 # Build settings
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
-paginate: 10
+
+# GitHub Pages / Jekyll plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # Collections
 collections:
