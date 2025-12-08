@@ -1,7 +1,7 @@
 ---
-title: CLI Task Manager
-tagline: Manage tasks from your terminal - because GUI is overrated!
-github: https://github.com/yourusername/taskcli
+title: ML Obversvability & Drift Monitoring Platform
+tagline: Track performance, data drift, and latency for production models in one place.
+github: https://github.com/Yash-Yashwant/ML-Observability.git
 ---
 
 A powerful command-line task manager for developers who live in the terminal.

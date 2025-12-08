@@ -1,8 +1,8 @@
 ---
-title: Markdown Notes App
-tagline: Lightning-fast note-taking with markdown - thoughts to text instantly!
-github: https://github.com/yourusername/md-notes
-demo: https://notes-demo.example.com
+title: DocChat - Semantic Search for Document Archives 
+tagline: Lost something in your notes? We'll dig through the chaos so you don't have to.
+github: https://github.com/Yash-Yashwant/DocChat.git
+demo: https://doc-chat-one.vercel.app/
 ---
 
 A minimalist, keyboard-driven note-taking application built for speed and simplicity.
