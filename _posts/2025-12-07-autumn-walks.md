@@ -5,6 +5,7 @@ date: 2025-12-07
 category: photography
 tags: [photos]
 image: /Yaga_personal_site/assets/iamges_drop/rocky_mountain.jpeg
+pin: False
 ---
 
 ## Journey

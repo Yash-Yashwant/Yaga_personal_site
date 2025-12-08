@@ -15,10 +15,16 @@ title: Home
 </div>
 
 <section class="blog-posts">
-    {% assign recent_posts = site.posts | limit: 5 %}
-    {% for post in recent_posts %}
+    {% assign pinned_posts = site.posts | where_exp: "post", "post.pin" %}
+    {% assign regular_posts = site.posts | where_exp: "post", "post.pin != true" %}
+    {% assign combined_posts = pinned_posts | concat: regular_posts %}
+
+    {% for post in combined_posts limit: 5 %}
     <article class="post-card">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <h3>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            {% if post.pin %}<span class="category" style="margin-left: 0.5rem;">Pinned</span>{% endif %}
+        </h3>
         <div class="post-meta">
             {{ post.date | date: "%B %d, %Y" }}
             {% if post.category %}
