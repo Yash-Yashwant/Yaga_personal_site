@@ -4,28 +4,19 @@ title: "Chasing Winter Light"
 date: 2024-11-10
 category: photography
 tags: [photos]
-image: https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=800
+image: /Yaga_personal_site/assets/iamges_drop/green-wavy.jpeg
 ---
 
-Winter brings a unique quality of light - low, soft, and ethereal. The sun hangs closer to the horizon, stretching shadows and bathing everything in warm tones even at midday.
-
-## The Golden Hour Extends
-
-In winter, golden hour isn't just an hour. The sun takes its time crossing the sky, giving photographers an extended window of beautiful, directional light.
-
-I've been out every clear morning this week, camera in hand, watching how the light transforms familiar streets into something magical.
-
-## Embracing the Cold
-
-Photography in winter requires dedication. Numb fingers struggle with camera dials. Breath fogs lenses. But the images captured in these conditions carry the feeling of that crisp, cold air.
-
-There's honesty in winter photography - no lush greens to hide behind, no easy subjects. Just light, shadow, and composition.
+I was not someone who liked hiking in general, not until I moved to Colorado and met the people around me. If it were just me alone, tucked away in my apartment, I would probably just stare at my monitor and type, type, type. But I realized that the people around you have a major influence on how you behave subconsciously, and that is what got me out on early morning hikes. My friends had a huge impact in this regard.
 
 ## What I've Learned
 
-- Dress in layers (obvious but essential)
-- Keep spare batteries warm in your pocket
-- Embrace minimalism in composition
-- Let the light be your subject
+- Actively tracking time boosts productivity 
+- It is really important to network with people
+- Embracing the small things matter
+- My songs taste has changed; as I have grown older, I have moved more toward melody based songs over hip hop and rap, rap
 
-More winter photographs coming soon. Follow along as the season unfolds.
+
+More photos coming...
+
+Until next time, keep your eyes open for the extraordinary in the ordinary.
