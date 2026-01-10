@@ -131,7 +131,7 @@ main {
 
 .intro::before,
 .intro::after {
-    content: '❦';
+    content: '\2766';
     position: absolute;
     font-size: 1.5rem;
     color: var(--gold);
