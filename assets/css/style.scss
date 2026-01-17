@@ -1,3 +1,6 @@
+---
+---
+
 /* ============================================
    ANTIQUE/VINTAGE THEME - Sepia & Classic
    ============================================ */
@@ -108,6 +111,33 @@ nav a:hover {
 
 nav a:hover::after {
     width: 100%;
+}
+
+/* Social Icons in Navigation */
+nav .social-icon {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+nav .social-icon::after {
+    display: none;
+}
+
+nav .social-icon svg {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+nav .linkedin-icon:hover {
+    color: #0077b5;
+    transform: translateY(-2px);
+}
+
+nav .github-icon:hover {
+    color: #333;
+    transform: translateY(-2px);
 }
 
 /* Main Content */
@@ -512,14 +542,15 @@ main {
 .pdf-viewer-container {
     background: var(--cream);
     border: 3px solid var(--sepia-light);
-    padding: 1rem;
+    padding: 0.5rem;
     margin-bottom: 3rem;
     box-shadow: 5px 5px 15px rgba(92, 74, 58, 0.2);
 }
 
 .pdf-viewer {
     width: 100%;
-    height: 800px;
+    height: 90vh;
+    min-height: 800px;
     border: none;
     background: white;
 }
@@ -674,7 +705,13 @@ footer p {
     }
 
     .pdf-viewer {
-        height: 600px;
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    nav .social-icon svg {
+        width: 20px;
+        height: 20px;
     }
 
     .social-icons {
