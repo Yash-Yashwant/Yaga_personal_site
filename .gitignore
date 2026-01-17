@@ -5,3 +5,5 @@ _site/
 vendor/
 .bundle/
 Gemfile.lock
+DUAL_Deployment_Guide.md
+CHANGES_SUMMARY.md
