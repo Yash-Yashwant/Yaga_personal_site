@@ -1,8 +1,8 @@
 # Site settings
 title: Yashwant Gandham
 description: Developer, Writer, Formula 1 Fan
-baseurl: "/Yaga_personal_site" # your repo name
-url: "https://Yash-Yashwant.github.io" # your GitHub Pages URL
+baseurl: "" # Empty for Vercel deployment (use "/Yaga_personal_site" for GitHub Pages)
+url: "https://yaga-personal-site-i5jtdrv46-yash-yashwants-projects.vercel.app" # Your Vercel URL
 author: Yaga
 
 # Build settings
